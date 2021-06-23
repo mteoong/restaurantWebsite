@@ -1,6 +1,16 @@
-function home() {
-    /*
+import {menu} from  './menu';
+
+function initialize() {
     addToolbar();
+    home();
+}
+
+function home() {
+    const wrapper = document.querySelector(".wrapper")
+    if(wrapper) {
+        wrapper.remove();
+    }
+
     const mainContent = document.createElement('div');
     mainContent.classList.add("main-content", "wrapper");
     document.body.append(mainContent);
@@ -20,10 +30,10 @@ function home() {
     main.append(h2);
 
     const order = document.createElement('div');
+    order.addEventListener('click', menu)
     order.classList.add("order");
     order.innerText = "Order Now";
     main.append(order);
-    */
 }
 
 function addToolbar() {
@@ -61,4 +71,4 @@ function addToolbar() {
     div.append(contact);
 }
 
-export { home };
+export { initialize, home };

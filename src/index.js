@@ -1,9 +1,9 @@
 import './style.css';
-import {home} from './home';
+import {initialize, home} from './home';
 import {menu} from  './menu';
 import {contact} from  './contact';
 
-home();
+initialize();
 
 function navigation() {
     const homePage = document.querySelector("#home");

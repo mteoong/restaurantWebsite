@@ -188,7 +188,7 @@ li:hover {
     background-image: url("./img/tempura.jpeg");
 }
 
-#riostto.dish-preview {
+#risotto.dish-preview {
     background-image: url("./img/risotto.jpeg");
 }
 
@@ -216,10 +216,12 @@ li:hover {
 
 form {
     margin-right: 30px;
+    text-align: center;
 }
 
 h1.title.contact {
     padding-top: 0;
+    padding-bottom: 20px;
     color: white;
 }
 
@@ -228,7 +230,7 @@ h1.title.contact {
     margin: 10px;
 }
 
-input, textarea {
+input, input.error:focus, textarea, textarea.error {
     font-size: 1.7rem;
     line-height: 1.23543;
     width: 100%;
@@ -237,23 +239,90 @@ input, textarea {
     border: 1px solid #d6d6d6;
     color: #333;
     border-radius: 3px;
+    background-color: white; 
 }
 
+input.error, textarea.error {
+    background-color: #fef0f0;
+}
+
+input.error ~ .placeholder,
+textarea.error ~ .placeholder {
+    color: #de071c;
+}
+
+input:focus, textarea:focus {
+    border-color: #0070c9;
+    box-shadow: 0 0 0 3px rgba(131, 192, 253, .5);
+    outline-offset: 1px;
+}
+
+input:focus ~ .placeholder, 
+textarea:focus ~ .placeholder,
+input.error:focus ~ .placeholder, 
+textarea.error:focus ~ .placeholder,
+input:valid ~ .placeholder, 
+textarea:valid ~ .placeholder,
+.has-input ~ .placeholder {
+    top: 8px;
+    font-size: 12px;
+    color: #888;
+}
+
+
 textarea {
-    height: 200px;
+    height: 180px;
+    padding-top: 25px;
 }
 
 .placeholder {
     position: absolute;
-    left: 17px;
     top: 18px;
-    font-size: 18px;
-    padding: 0;
+    left: 17px;
     color: #888;
+    font-size: 17px;
+    padding: 0;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition-duration: .125s;
+    display: block;
+    pointer-events: none;
+}
+
+.placeholder:focus {
+    top: 0;
+    font-size: 12px;
 }
 
 h1.form {
     color: white;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
+}
+
+button[type="submit"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px #0070c9;
+}
+
+.error-message {
+    color: white;
+    margin: 3px;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+input:focus ~ .error-message,
+textarea:focus ~ .error-message {
+    display: none;
 }
