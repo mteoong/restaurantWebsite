@@ -1,11 +1,17 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     devtool: 'inline-source-map',
+    output: {
+        assetModuleFilename: 'assets/[hash][ext]',
+        clean: true,
+    },
     plugins: [
-        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'Restaurant Yukihira',
+        }),
     ],
     module: {
         rules: [
