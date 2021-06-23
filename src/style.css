@@ -1,0 +1,259 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: #252d3a;
+    color: white;
+    font-family: georgia;
+    padding-top: 95px;
+    background-image: url("./img/logo.jpeg");
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    width: 100%;
+}
+
+h1.logo {
+    font-size: 2.7rem; 
+    text-align: center;
+    margin-bottom: 0;
+}
+
+hr {
+    width: 400px;
+}
+
+.toolbar {
+    display: flex;
+    max-width: 720px;
+    margin: auto;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-bar {
+    margin: 5px 20px 10px 20px;
+}
+
+.nav-bar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+span.nav-bar {
+    font-size: 2.4rem;
+}
+
+/* ------- Main ------- */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./img/groupPhoto.jpeg");
+    height: calc(100% - 200px);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+div.main {
+    flex: 0 1 1;
+    background-color: rgba(36, 36, 36, 0.753);
+    color: white;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgb(56, 56, 56);
+}
+
+@media (max-height: 500px) {
+    div.main {
+        display: none;
+    }
+}
+
+h1.main {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2.main {
+    font-size: 2.2rem;
+}
+
+.order {
+    border: 1px solid white;
+    width: 120px;
+    padding: 10px;
+    font-size: 1.8rem;
+    border-radius: 4px;
+}
+
+.order:hover {
+    box-shadow: 0 0  1px 1px white;
+    cursor: pointer;
+}
+
+/*------- Menu ------*/
+.wrapper {
+    background-color:white;
+    height: calc(100% - 200px);
+}
+
+h1.title {
+    font-size: 4rem; 
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+.main-menu {
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dish-preview {
+    width: 500px;
+    height: 350px;
+    background-image: url("./img/default.jpeg");
+    background-position: 50% 50%;
+    box-shadow: 0px 0px 6px 1px rgba(109, 109, 109, 0.527);
+    background-size: cover;
+}
+
+ul.dishes {
+    height: 100%;
+    list-style: none;
+}
+
+li {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+#furikake.dish-preview {
+    background-image: url("./img/furikake.jpeg");
+}
+
+#rainbow.dish-preview {
+    background-image: url("./img/rainbow.jpeg");
+}
+
+#steak.dish-preview {
+    background-image: url("./img/steak.jpeg");
+}
+
+#pork.dish-preview {
+    background-image: url("./img/pork.jpeg");
+}
+
+#karaage.dish-preview {
+    background-image: url("./img/karaage.jpeg");
+}
+
+#ramen.dish-preview {
+    background-image: url("./img/ramen.jpeg");
+}
+
+#gyoza.dish-preview {
+    background-image: url("./img/gyoza.jpeg");
+}
+
+#tempura.dish-preview {
+    background-image: url("./img/tempura.jpeg");
+}
+
+#riostto.dish-preview {
+    background-image: url("./img/risotto.jpeg");
+}
+
+/* ------ CONTACT -------*/
+.contact-wrapper {
+    background-image: url(./img/restaurang.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-content {
+    background-color:rgba(36, 36, 36, 0.753);
+    max-width: 1080px;
+    margin: auto;
+    padding: 30px;
+}
+
+form {
+    margin-right: 30px;
+}
+
+h1.title.contact {
+    padding-top: 0;
+    color: white;
+}
+
+.form-item {
+    position: relative;
+    margin: 10px;
+}
+
+input, textarea {
+    font-size: 1.7rem;
+    line-height: 1.23543;
+    width: 100%;
+    height: 3.3em;
+    padding: 18px 16px 0px 16px;
+    border: 1px solid #d6d6d6;
+    color: #333;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 200px;
+}
+
+.placeholder {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    font-size: 18px;
+    padding: 0;
+    color: #888;
+}
+
+h1.form {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
